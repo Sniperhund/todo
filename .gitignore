@@ -1,0 +1,34 @@
+# macOS system files
+.DS_Store
+
+# Node.js dependencies
+node_modules/
+
+# Compiled output
+dist/
+build/
+
+# Logs and databases
+*.log
+*.sqlite
+
+# Environment variables
+.env
+
+# IDE and editor files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Package lock files
+package-lock.json
+yarn.lock
+
+# Dependency directories
+bower_components/
+jspm_packages/
+
+# Build artifacts
+*.min.js
+*.min.css
