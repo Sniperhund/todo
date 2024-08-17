@@ -1,1 +1,123 @@
 @import url("/assets/css/default.css");
+
+html {
+    font-family: "Noto Sans", sans-serif;
+}
+
+#container {
+    display: flex;
+
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+aside {
+    width: 400px;
+    background-color: rgb(250, 248, 246);
+
+    input {
+        background-color: inherit;
+    }
+
+    h1 {
+        font-size: 3.6rem;
+        margin-bottom: 3rem;
+    }
+}
+
+#pages {
+    padding: 40px 30px;
+    overflow-y: auto;
+
+    button,
+    div {
+        display: grid;
+        grid-template-columns: 40px 1fr;
+        align-items: center;
+        text-align: left;
+
+        width: 100%;
+
+        padding: 10px;
+        border-radius: 8px;
+
+        transition: background-color 0.1s ease-in-out;
+
+        font-size: 1.8rem;
+
+        i {
+            font-size: 2rem;
+        }
+    }
+
+    button:hover,
+    button.active {
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+}
+
+#content {
+    padding: 50px 45px;
+    overflow-y: auto;
+    flex-grow: 1;
+}
+
+#todo-title {
+    margin-bottom: 4rem;
+    width: 100%;
+    border: none;
+    font-size: 3rem;
+}
+
+#todo-title:focus {
+    outline: none;
+}
+
+input[type="text"] {
+    font-size: 1.8rem;
+    width: 100%;
+    border: none;
+}
+
+input:focus {
+    outline: none;
+}
+
+.todo-item {
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    align-items: center;
+
+    padding: 10px 0;
+
+    /* Hide the default checkbox */
+    input[type="checkbox"] {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 2px solid rgba(0, 0, 0, 0.25);
+        display: inline-block;
+        position: relative;
+        cursor: pointer;
+        outline: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Checked state styling */
+    input[type="checkbox"]:checked {
+        background-color: #007aff;
+        border-color: #007aff;
+    }
+
+    input[type="checkbox"]:checked::before {
+        font: var(--fa-font-solid);
+        content: "\f00c";
+        color: white;
+    }
+}
